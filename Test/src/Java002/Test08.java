@@ -5,20 +5,21 @@
 package Java002;
 
 /**
- * @author （作成者） <br />
- *         （クラス論理名） <br />
- *         （説明） <br />
- *         更新履歴 yyyy/mm/dd （更新者）：（説明） <br />
+ * @author （y-kimura） <br />
+ *         （Test08） <br />
+ *         （奇数のみ加算） <br />
+ *         更新履歴 2016/7/23 （y-kimura）：（新規作成） <br />
  */
 public class Test08 {
 
   /**
-   * （メソッド論理名） <br />
-   * （説明） <br />
+   * （奇数のみ加算） <br />
+   * （1から100までの奇数のみを加算する） <br />
    * 
    * @param args 奇数のみ加算
    */
   public static void main( String[] args ) {
+    // 　2ずつ加算する
     int sum = 0;
     int i;
     for ( i = 1; i <= 100; i += 2 ) {
@@ -26,6 +27,19 @@ public class Test08 {
     }
 
     System.out.println( sum );
+
+    //　余りが1になった値のみ加算する
+    int sum2 = 0;
+    int k;
+    int j;
+    for ( j = 1; j <= 100; j++ ) {
+      k = j % 2;
+      if ( k == 1 ) {
+        sum2 += j;
+      }
+    }
+
+    System.out.println( sum2 );
   }
 
 }
