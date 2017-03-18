@@ -44,4 +44,15 @@ public class Member {
       System.out.println( "社員No=[" + this.id + "]と、社員No=[" + mem.id + "]は同姓同名ではありません" );
     }
   }
+    
+//  名前取得メソッド<br />
+    public String getFirstName(){
+    return this.fstName;
+  }
+    
+//  名前変更メソッド<br />
+    public void setFirstName( String nme ){
+    this.fstName = nme;
+  }
+    
 }

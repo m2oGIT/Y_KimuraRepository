@@ -4,14 +4,16 @@
 
 package Java008;
 
+import Java007.Member;
+
 /**
  * @author （y-kimura） <br />
- *         （ProgramAfter2） <br />
- *         （メソッドのクラス化） <br />
+ *         （ProgramAfter3） <br />
+ *         （getter、setterメソッドの追加） <br />
  *         
- *         更新履歴 2017/1/14 （y-kimura）：（新規作成） <br />
+ *         更新履歴 2017/1/22 （y-kimura）：（新規作成） <br />
  */
-public class ProgramAfter2 {
+public class ProgramAfter3 {
   /**
    * メインメソッド<br />
    * 処理を起動します。 <br />
@@ -21,23 +23,22 @@ public class ProgramAfter2 {
   public static void main(String[] args) {
   //一人目
   Member member1 = new Member("00001","一郎","鈴木");
-  //二人目
-  Member member2 = new Member("00002","一郎","鈴木");
-  //三人目
-  Member member3 = new Member("00003","三郎","鈴木");
   
-  //社員情報を表示(一人目)
+  //社員情報を表示
   member1.showInfo();
-  //社員情報を表示(二人目)
-  member2.showInfo();
-  //社員情報を表示(三人目)
-  member3.showInfo();
   
-  //同姓同名チェック(一人目と二人目)
-  member1.checkName(member2);
-  //同姓同名チェック(一人目と三人目)
-  member1.checkName(member3);
-  //同姓同名チェック(二人目と三人目)
-  member2.checkName(member3);
+  //名前を表示
+  System.out.println( "名前、変更前:"+ member1.getFirstName() );
+  
+  //名前を変更
+  member1.setFirstName("花子");
+  
+  //名前を表示
+  System.out.println( "名前、変更後:"+ member1.getFirstName() );
+  System.out.println();
+  
+  //社員情報を表示
+  member1.showInfo();
+  
   }
 }
