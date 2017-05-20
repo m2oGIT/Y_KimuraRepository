@@ -61,11 +61,10 @@ public class WEB001b extends javax.servlet.http.HttpServlet {
         weight = (list[i] - 100) * 0.9;
         // 小数点以下５桁を表示
         pw.printf("%.5f",weight);
-        // 改行　←できない！！(2017/4/9)
-        pw.println("\r\n");
+        pw.println("<br/>");
         // 小数点以下５桁を表示
         System.out.printf("%.5f",weight);
-        System.out.println("\r\n");
+        System.out.println("\n");
         // 初期化
         weight =0.00000;
       }
