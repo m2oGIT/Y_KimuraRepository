@@ -3,6 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%@page import="java.text.SimpleDateFormat" %>
 <%@page import="java.util.Date" %>
+<%@page import="entity.EmployeeEntity" %>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
@@ -46,6 +47,20 @@ System.out.println(param);
     %>
 
 <%= fmt.format(now) %>
+
+<hr>
+    ForwardServletから受信した値<br>
+<%
+    // ForwardServletで設定した値を取得
+    // String name = (String) request.getAttribute("name");
+    // Integer age = (Integer) request.getAttribute("age");
+
+    EmployeeEntity entity = (EmployeeEntity) request.getAttribute("entity");
+%>
+
+<%= entity.getNo() %><br>
+<%= entity.getName() %><br>
+<%= entity.getAge() %>
 
 </body>
 </html>

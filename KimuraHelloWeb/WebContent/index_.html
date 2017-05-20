@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="Shift-JIS">
+<title>演習</title>
+</head>
+<body>
+EchoServletへ値送信<br>
+<form action="./EchoServlet">
+    <input type="text" name="param" />
+    <input type="submit" value="EchoServletへ送信" />
+</form>
+
+<form action="./EchoServlet" method="POST">
+    <input type="text" name="param" />
+    <input type="submit" value="POSTメソッドでEchoServletへ送信" />
+</form>
+
+<form action="./ForwardServlet" method="POST">
+    <input type="text" name="param" />
+    <input type="submit" value="POSTメソッドでForwardServletへ送信" />
+</form>
+</body>
+</html>
